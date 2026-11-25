@@ -118,7 +118,7 @@ header.top { background: var(--grape); border-bottom: 5px solid var(--grape-edge
 }
 .pitch h1 { color: var(--on-grape); font-size: 34px; line-height: 1.2; margin: 0 0 12px; }
 .pitch .lead { color: var(--on-grape-soft); font-size: 17px; margin: 0 auto 18px; max-width: 34em; }
-.stores { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 0; }
+.stores { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; justify-content: center; margin: 0; }
 .store {
   background: var(--sun);
   color: var(--sun-ink);
@@ -128,6 +128,16 @@ header.top { background: var(--grape); border-bottom: 5px solid var(--grape-edge
   font-weight: 600;
   font-size: 15px;
   text-decoration: none;
+}
+/* Apple's official badge, unchanged; its clear space is a quarter of its height. */
+.badge { display: inline-block; line-height: 0; border-radius: 9px; }
+.badge img { height: 48px; width: auto; }
+/* A store that isn't out yet: there, but quieter than the real link. */
+.store.soon {
+  background: transparent;
+  color: var(--on-grape-soft);
+  border: 2px solid var(--on-grape-soft);
+  padding: 8px 14px;
 }
 .glim { width: 220px; margin: 8px auto 0; position: relative; animation: bob 4s ease-in-out infinite; }
 @keyframes bob { 50% { transform: translateY(-8px); } }
